@@ -21,29 +21,26 @@ let kevin = {
 }
 
 const ADULT = 18
-const mainId = document.getElementById('main')
-const cumpleId = document.getElementById('cumple')
 
-let ifAdult = (person) => {
-        return person.age >= ADULT // se hace la condicion si es mayor de edad y la retorna
-        // if ( person.age >= ADULT ) { mainId.innerHTML = `${person.name} es Mayor`} 
-        // else { mainId.innerHTML = `${person.name} no eres Mayor jeje` }
-}
+const ifAdult = person => person.age >= ADULT// se hace la condicion si es mayor de edad y la retorna y si solo Retorna algo podemos quitar la palabra RETURN
 
-let birthay = (person) => {
-     let personOld = person.age 
-     return person.age += 1  
-        cumpleId.innerHTML = `${person.name} Estas de Cumple, tenias ${personOld} ahora tienes ${personNew}`
-    }
 
-function printPerson () {
-    if (ifAdult) {
-        let resultadoId = document.getElementById('resultado')
-            resultadoId.innerHTML = 'Esto funciono'
-    }
-}
+let printPersonAdult = (person) => { 
+    if ( ifAdult(person) ){ console.log(`${person.name} Es Mayor de Edad`) }
+    else { console.log(`${person.name} No es mayor de Edad`) }
+ }
+ 
+ let sumOneAge = ({ age }) => age += 1 // destructuro el objeto que tiene un AGE y retornara 
 
-ifAdult(kevin)
+ let birthay = (person) => {
+    console.log(`${person.name} Esta cumpliendo años y ahora tiene:`)
+        console.log(sumOneAge(person) `Ahora ${person.name} tiene ${person.age}`) 
+ }
+
+
+
+
+ printPersonAdult(kevin)
 // birthay(kevin)
 // printPerson(kevin)
 

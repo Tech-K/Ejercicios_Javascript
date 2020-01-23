@@ -15,5 +15,5 @@ let kevin = {
 }
 
 let anotherPerson = {
-    ...kevin
+    ... kevin //desglosamos kevin en un nuevo objeto
 }

@@ -18,21 +18,24 @@ function printPersons (person) {
     if (person.student) { console.log('Es Estudiante') }
     else{ console.log('Tiene que estudiar') }
 
-    if (person.age >= MAYOREDAD) { console.log('Es M ayor de Edad') }
+    if (person.age >= MAYOREDAD) { console.log('Es Mayor de Edad') }
     else { console.log('Es Menor de Edad') }
 }
 
 console.log(printPersons(kevin))
+
+//////////////////////////////////////////////////////////////////////
 
 let mainId = document.getElementById('main')
 
 let escribirMain = () =>{
     if (mainId.innerHTML === 'hola') {
         console.log('funciona mainId')
-        mainId.innerHTML += ' Kevin jeje'
+            mainId.innerHTML += ' Kevin jeje'
+
     }else { 
-        mainId.innerHTML += ' Mano no funciono xd'
-    }
+        console.log('No funciono Man xd') 
+            mainId.innerHTML += ' Mano no funciono xd' }
 } 
 
 escribirMain()
